@@ -1,4 +1,19 @@
 /* styles.css */
+:root {
+    /* Light mode colors - Calm Palette */
+    --background-color-light: #F5F5F5;
+    --text-color-light: #333333;
+    --primary-color-light: #008080;
+    --secondary-color-light: #4F4F4F;
+
+    /* Dark mode colors - Calm Palette */
+    --background-color-dark: #121212;
+    --text-color-dark: #E0E0E0;
+    --primary-color-dark: #BB86FC;
+    --secondary-color-dark: #03DAC6;
+}
+
+
 html {
     font-size: 100%; /* Adjusts to user's browser settings */
 }
@@ -7,8 +22,8 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: #fff;
-    color: #333;
+    background: var(--background-color-light);
+    color: var(--text-color-light);
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
@@ -28,6 +43,7 @@ header {
 .logo {
     font-weight: 700;
     font-size: 1.5em;
+    color: var(--primary-color-light);
 }
 
 nav ul {
@@ -42,7 +58,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: var(--primary-color-light);
     font-weight: 700;
     transition: color 0.5s ease;
 }
@@ -64,14 +80,14 @@ nav ul li a {
 .social-link {
     margin-right: 10px;
     text-decoration: none;
-    color: #333;
+    color: var(--primary-color-light);
     transition: color 0.5s ease;
 }
 
 .btn-resume {
     display: inline-block;
     text-decoration: none;
-    background: #000;
+    background: var(--primary-color-light);
     color: #fff;
     padding: 10px 20px;
     font-weight: 700;
@@ -79,28 +95,24 @@ nav ul li a {
 }
 
 .btn-resume:hover {
-    background: #555;
-}
-
-body.light-mode {
-    background: #fff;
-    color: #333;
+    background: var(--secondary-color-light);
 }
 
 body.dark-mode {
-    background-color: #000;
-    color: #fff;
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
 }
 
 body.dark-mode nav ul li a,
 body.dark-mode .social-link,
+body.dark-mode .logo,
 body.dark-mode .btn-resume {
-    color: #fff;
+    color: var(--primary-color-dark);
 }
 
 body.dark-mode .btn-resume {
-    background: #fff;
-    color: #000;
+    background: var(--text-color-dark);
+    color: var(--background-color-dark);
 }
 
 button#mode-switch {
@@ -112,7 +124,7 @@ button#mode-switch {
 }
 
 body.dark-mode button#mode-switch {
-    color: #fff;
+    color: var(--primary-color-dark);
 }
 
 /* Add more styles as needed for other sections */
