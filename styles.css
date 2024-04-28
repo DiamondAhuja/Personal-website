@@ -1,145 +1,144 @@
 /* styles.css */
 :root {
-    /* Light mode colors - Calm Palette */
-    --background-color-light: #F5F5F5;
-    --text-color-light: #333333;
-    --primary-color-light: #008080;
-    --secondary-color-light: #4F4F4F;
+  /* Light mode colors - Calm Palette */
+  --background-color-light: #f5f5f5;
+  --text-color-light: #333333;
+  --primary-color-light: #008080;
+  --secondary-color-light: #4f4f4f;
 
-    /* Dark mode colors - Calm Palette */
-    --background-color-dark: #121212;
-    --text-color-dark: #E0E0E0;
-    --primary-color-dark: #BB86FC;
-    --secondary-color-dark: #03DAC6;
+  /* Dark mode colors - Calm Palette */
+  --background-color-dark: #121212;
+  --text-color-dark: #e0e0e0;
+  --primary-color-dark: #bb86fc;
+  --secondary-color-dark: #03dac6;
 }
 
-
 html {
-    font-size: 100%; /* Adjusts to user's browser settings */
+  font-size: 100%; /* Adjusts to user's browser settings */
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: var(--background-color-light);
-    color: var(--text-color-light);
-    transition: background-color 0.5s ease, color 0.5s ease;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--background-color-light);
+  color: var(--text-color-light);
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
 }
 
 .logo {
-    font-weight: 700;
-    font-size: 1.5em;
-    color: var(--primary-color-light);
+  font-weight: 700;
+  font-size: 1.5em;
+  color: var(--primary-color-light);
 }
 
 nav ul {
-    list-style-type: none;
-    display: flex;
-    padding: 0;
+  list-style-type: none;
+  display: flex;
+  padding: 0;
 }
 
 nav ul li {
-    padding: 0 15px;
+  padding: 0 15px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: var(--primary-color-light);
-    font-weight: 700;
-    transition: color 0.5s ease;
+  text-decoration: none;
+  color: var(--primary-color-light);
+  font-weight: 700;
+  transition: color 0.5s ease;
 }
 
 .intro {
-    text-align: center;
-    padding: 50px 20px;
+  text-align: center;
+  padding: 50px 20px;
 }
 
 .intro h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+  font-size: 2.5em;
+  margin-bottom: 20px;
 }
 
 .social-links {
-    margin: 20px 0;
+  margin: 20px 0;
 }
 
 .social-link {
-    margin-right: 10px;
-    text-decoration: none;
-    color: var(--primary-color-light);
-    transition: color 0.5s ease;
+  margin-right: 10px;
+  text-decoration: none;
+  color: var(--primary-color-light);
+  transition: color 0.5s ease;
 }
 
 .btn-resume {
-    display: inline-block;
-    text-decoration: none;
-    background: var(--primary-color-light);
-    color: #fff;
-    padding: 10px 20px;
-    font-weight: 700;
-    transition: background-color 0.3s ease, color 0.5s ease;
+  display: inline-block;
+  text-decoration: none;
+  background: var(--primary-color-light);
+  color: #fff;
+  padding: 10px 20px;
+  font-weight: 700;
+  transition: background-color 0.3s ease, color 0.5s ease;
 }
 
 .btn-resume:hover {
-    background: var(--secondary-color-light);
+  background: var(--secondary-color-light);
 }
 
 body.dark-mode {
-    background-color: var(--background-color-dark);
-    color: var(--text-color-dark);
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
 }
 
 body.dark-mode nav ul li a,
 body.dark-mode .social-link,
 body.dark-mode .logo,
 body.dark-mode .btn-resume {
-    color: var(--primary-color-dark);
+  color: var(--primary-color-dark);
 }
 
 body.dark-mode .btn-resume {
-    background: var(--text-color-dark);
-    color: var(--background-color-dark);
+  background: var(--text-color-dark);
+  color: var(--background-color-dark);
 }
 
 button#mode-switch {
-    background: none;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    transition: color 0.5s ease;
+  background: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: color 0.5s ease;
 }
 
 body.dark-mode button#mode-switch {
-    color: var(--primary-color-dark);
+  color: var(--primary-color-dark);
 }
 
 /* Add more styles as needed for other sections */
 
 /* Responsive design */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
+  nav ul {
+    flex-direction: column;
+  }
 
-    nav ul li {
-        padding: 5px 0;
-    }
+  nav ul li {
+    padding: 5px 0;
+  }
 
-    .intro h1 {
-        font-size: 1.75em;
-    }
+  .intro h1 {
+    font-size: 1.75em;
+  }
 }
