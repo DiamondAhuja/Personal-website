@@ -1,23 +1,97 @@
 /* styles.css */
+html {
+    font-size: 100%; /* Adjusts to user's browser settings */
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
 }
 
 header {
-    background-color: #f8f9fa;
-    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5em;
 }
 
 nav ul {
     list-style-type: none;
+    display: flex;
     padding: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 10px;
+    padding: 0 15px;
 }
 
-section {
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+}
+
+.intro {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.intro h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.social-links {
     margin: 20px 0;
+}
+
+.social-link {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.btn-resume {
+    display: inline-block;
+    text-decoration: none;
+    background: #000;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.btn-resume:hover {
+    background: #555;
+}
+
+/* Add more styles as needed for other sections */
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        padding: 5px 0;
+    }
+
+    .intro h1 {
+        font-size: 1.75em;
+    }
 }
